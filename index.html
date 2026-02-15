@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>TrackStock // Global Market Intelligence</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#09090b",
+                        surface: "#121215",
+                        "surface-highlight": "#1e1e24",
+                        border: "#27272a",
+                        primary: "#34d399",
+                        "primary-hover": "#059669",
+                        "primary-soft": "rgba(52, 211, 153, 0.1)",
+                        danger: "#fb7185",
+                        "danger-soft": "rgba(251, 113, 133, 0.1)",
+                        text: {
+                            main: "#f4f4f5",
+                            muted: "#a1a1aa",
+                            dim: "#52525b",
+                        },
+                        // Specific colors from screens
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            900: '#064e3b',
+                        },
+                        dark: "#09090b",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        mono: ["JetBrains Mono", "monospace"],
+                        display: ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        'xl': '0.75rem',
+                        '2xl': '1rem',
+                        '3xl': '1.5rem',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px -5px rgba(52, 211, 153, 0.15)',
+                        "soft": "0 4px 20px rgba(0, 0, 0, 0.25)",
+                    },
+                    backgroundImage: {
+                        'gradient-glow': 'radial-gradient(circle at center, rgba(52, 211, 153, 0.15) 0%, rgba(9, 9, 11, 0) 70%)',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 99px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+        .glass-panel {
+            background: rgba(24, 24, 27, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .table-row-hover { transition: background-color 0.2s ease; }
+        .table-row-hover:hover { background-color: rgba(255, 255, 255, 0.03); }
+        /* Hide TradingView branding if possible via overflow, though not recommended */
+        .tv-widget-container iframe { border-radius: 0.75rem; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background font-sans text-text-main h-screen overflow-hidden antialiased selection:bg-primary selection:text-black">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
