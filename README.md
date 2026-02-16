@@ -57,7 +57,10 @@ npm run build
 
 ## 📸 Screenshots
 
-[Add your screenshots here]
+Screenshots coming soon! In the meantime, you can:
+- Browse the component code to see the structure
+- Run `npm run dev` locally to see it live
+- Check out the [live components on GitHub](../../tree/main/components)
 
 ## 💰 Purchase
 
